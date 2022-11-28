@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".RegisterActivity"
     android:background="@drawable/login_background">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:textSize="20dp"></TextView>
 
@@ -22,6 +22,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txt1"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Name"
+            android:textColor="@color/white"></TextView>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtname"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/white"></EditText>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/laymob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay1"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/txtmob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Mobile"
+
+            android:textColor="@color/white"></TextView>
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtmob"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/lightblue"
+            android:textColor="@color/white"></EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/laymob"
         android:layout_marginLeft="20dp">
 
         <TextView
@@ -43,12 +95,13 @@
             android:backgroundTint="@color/lightblue"
             android:textColor="@color/white"></EditText>
     </RelativeLayout>
+
     <RelativeLayout
+        android:id="@+id/lay3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/lay2"
-        android:layout_below="@id/lay1">
+        android:layout_below="@id/lay2"
+        android:layout_marginLeft="20dp">
 
         <TextView
             android:id="@+id/txtpsd"
@@ -59,7 +112,7 @@
             android:textColor="@color/white"></TextView>
 
         <EditText
-            android:id="@+id/paswd"
+            android:id="@+id/pswd"
             android:layout_width="370dp"
             android:layout_height="50dp"
             android:layout_below="@id/txtpsd"
@@ -71,81 +124,16 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnreg"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lay2"
+        android:layout_below="@id/lay3"
         android:layout_centerInParent="true"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/button_design"
-        android:text="SIGN IN"
+        android:text="SIGN Up"
         android:textColor="@color/white"></Button>
-    <TextView
-        android:id="@+id/txtfrpswd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgotten your password?"
-        android:textColor="@color/lightblue"
-        android:layout_below="@id/btnlogin"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"></TextView>
-
-    <TextView
-        android:id="@+id/dnthaveacnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtfrpswd"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:text="Don't have an account?"
-        android:textColor="@color/white"></TextView>
-
-    <Button
-        android:id="@+id/btnreg"
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dnthaveacnt"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_transparent"
-        android:text="REGISTER"
-        android:textColor="@color/white"></Button>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnreg"
-        android:layout_marginTop="50dp"
-        android:layout_centerInParent="true">
-        <ImageButton
-            android:id="@+id/imggoogle"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@mipmap/ic_google2_foreground"></ImageButton>
-        <ImageButton
-            android:id="@+id/imgfb"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:src="@mipmap/ic_facebook_foreground"></ImageButton>
-
-        <ImageButton
-            android:id="@+id/imgig"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:src="@mipmap/ic_ig_foreground"></ImageButton>
-
-        <ImageButton
-            android:id="@+id/imgwatsapp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:src="@mipmap/ic_wapp_foreground"></ImageButton>
-
-    </LinearLayout>
-
-
 
 
 

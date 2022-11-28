@@ -17,13 +17,13 @@ public class SplashScreen2 extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(SplashScreen2.this,SplashScreen3.class);
+                Intent i=new Intent(SplashScreen2.this,Login.class);
                 startActivity(i);
                 finish();
 
 
             }
-        },5000);
+        },1000);
 
 
 
